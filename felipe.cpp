@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#include <string.h>
+#include <stdio.h> \\Biblioteca de Comunicação
+#include <stdlib.h> \\Reserva de memoria para alguma coisa
+#include <locale.h> \\biblioteca de linguagem
+#include <string.h> \\biblioteca de strings
 
 int registro()	
 {
@@ -14,7 +14,7 @@ int registro()
 	 char arquivo[50];
 	
 	printf("Digite o CPF a ser cadrastado: ");
-	scanf("%s", cpf);
+	scanf("%s", cpf); 
 	
 	strcpy(arquivo, cpf);
 	
