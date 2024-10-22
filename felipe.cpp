@@ -1,7 +1,7 @@
-#include <stdio.h> \\Biblioteca de Comunicação
-#include <stdlib.h> \\Reserva de memoria para alguma coisa
-#include <locale.h> \\biblioteca de linguagem
-#include <string.h> \\biblioteca de strings
+#include <stdio.h> //Biblioteca de Comunicação
+#include <stdlib.h> //Reserva de memoria para alguma coisa
+#include <locale.h> //biblioteca de linguagem
+#include <string.h> //biblioteca de strings
 
 int registro()	
 {
@@ -14,17 +14,17 @@ int registro()
 	 char arquivo[50];
 	
 	printf("Digite o CPF a ser cadrastado: ");
-	scanf("%s", cpf); 
+	scanf("%s", cpf); //Armazena a variavel do tipo string - Lê a string 'cpf'
 	
-	strcpy(arquivo, cpf);
+	strcpy(arquivo, cpf);//Copia o 'cpf' para o arquivo
 	
-	FILE *file;
-	file = fopen(arquivo, "w");
-	fprintf(file,cpf);
-	fclose(file);
+	FILE *file;//Cria o arquivo (file) no banco de dados do Pc(FILE)
+	file = fopen(arquivo, "w");//Abre o arquuivo (file)
+	fprintf(file,cpf);// Salva no arquivo (file)
+	fclose(file);//Fecha o arquivo (file)
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, " \n");
+	file = fopen(arquivo, "a");//Abre o arquivo e atualiza
+	fprintf(file, ", ");//Separa os cpfs com virgula
 	fclose(file);
 	
 	printf("Digite o nome a ser cadastrado: ");
@@ -115,15 +115,15 @@ int deletar()
 
     int main()
 {
-	int opcao=0;
-	int	laco=1;
+	int opcao=0;// Primeira variavel sempre será 0
+	int laco=1;
 	
-	for(laco=1;laco=1;)
+	for(laco=1;laco=1;)//laço infinito
     { 
     
 	   system("cls");
 	 
-	   setlocale(LC_ALL, "Portuguese");
+	   setlocale(LC_ALL, "Portuguese");//modo de escrita
 	 
 	   printf("### Cartório da Ebac ###\n\n");
 	   printf("Escolha a opção desejada do menu:\n\n");
@@ -133,11 +133,11 @@ int deletar()
 	   printf("\t4 - Sair do Sistema\n");
 	   printf("Opção: ");
 	 
-	    scanf("%d", &opcao);
+	    scanf("%d", &opcao);//Armazena variaveis do tipo inteiro, le a variavel (opção)
 	
 	   system("cls");
 	   
-	   switch(opcao)
+	   switch(opcao)//switch e if (memória e processamento)
 	   {
             case 1:
             	registro();
@@ -154,7 +154,7 @@ int deletar()
 		case 4:
 		printf("Obrigado por ultilizar o sistema!");
 		break;
-		return 0;   
+		return 0;//retorna variavel 0, o sistema encerra   
 		   
 	        	
 	        default:
