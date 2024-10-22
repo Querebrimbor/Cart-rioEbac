@@ -75,12 +75,12 @@ int consulta()
 	 
 	 if(file == NULL)
 	 {
-	 	printf("N„o foi possÌvel encontrar o arquivo!.\n");
+	 	printf("N√£o foi poss√≠vel encontrar o arquivo!.\n");
 	 }
 	 
 	 while(fgets(conteudo, 200, file) != NULL)
 	 {
-	 	printf("\nEssas s„o as informaÁıes do Usu·rio: ");
+	 	printf("\nEssas s√£o as informa√ß√µes do Usu√°rio: ");
 	 	printf("%s", conteudo);
 	 	printf("\n\n");
 	 }	 
@@ -107,7 +107,7 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("Usu·rio n„o encontrado. \n");
+		printf("Usu√°rio n√£o encontrado. \n");
 		system("pause");
 	}
 	
@@ -125,13 +125,13 @@ int deletar()
 	 
 	   setlocale(LC_ALL, "Portuguese");
 	 
-	   printf("### CartÛrio da Ebac ###\n\n");
-	   printf("Escolha a opÁ„o desejada do menu:\n\n");
+	   printf("### Cart√≥rio da Ebac ###\n\n");
+	   printf("Escolha a op√ß√£o desejada do menu:\n\n");
 	   printf("\t1 - Registrar nomes\n");
 	   printf("\t2 - Consultar nomes\n");
 	   printf("\t3 - Deletar nomes\n");
-	   printf("\t Esse software È para Luana\n");
-	   printf("OpÁ„o: ");
+	   printf("\t4 - Sair do Sistema\n");
+	   printf("Op√ß√£o: ");
 	 
 	    scanf("%d", &opcao);
 	
@@ -140,19 +140,25 @@ int deletar()
 	   switch(opcao)
 	   {
             case 1:
-            registro();
-			break;
+            	registro();
+		break;
 	        
 	        case 2: 
-			consulta();
+		consulta();
 	    	break;
 	        
 	        case 3:
 	       	deletar();
 	        break;
+		
+		case 4:
+		printf("Obrigado por ultilizar o sistema!");
+		break;
+		return 0;   
+		   
 	        	
 	        default:
-	        printf("Essa opÁ„o n„o est· DisponÌvel!!\n");
+	        printf("Essa op√ß√£o n√£o est√° Dispon√≠vel!!\n");
 	        system("pause");
 	        break;
 	   } 
